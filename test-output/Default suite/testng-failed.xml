@@ -3,15 +3,19 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="tests.LoginTest">
+      <class name="tests.CheckoutTest">
         <methods>
           <include name="setUp"/>
+          <include name="testOrderTotalEqualsSubtotalPlusTax"/>
           <include name="tearDown"/>
-          <include name="testLogout"/>
           <include name="beforeSuite"/>
           <include name="afterSuite"/>
+          <include name="testErrorWhenLastNameMissing"/>
+          <include name="testOrderConfirmationMessage"/>
+          <include name="testErrorWhenZipCodeMissing"/>
+          <include name="testErrorWhenFirstNameMissing"/>
         </methods>
-      </class> <!-- tests.LoginTest -->
+      </class> <!-- tests.CheckoutTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
