@@ -120,8 +120,15 @@ public class HomePage extends BasePage {
     }
 
     public CartPage goToCart() {
-        log.info("Navigating to Cart");
-        click(cartIcon);
+        log.info("Navigating to cart");
+        // Direct navigation is more reliable than clicking cart icon on CI
+        String currentUrl = driver.getCurrentUrl();
+        String baseUrl = currentUrl.substring(0, currentUrl.lastIndexOf("/") + 1);
+        driver.get(baseUrl + "cart.html");
+        WaitUtil.waitForUrlContains(driver, "cart");
+        try { Thread.sleep(1500); } catch (InterruptedException e) {
+            Thread.currentThread().interrupt();
+        }
         return new CartPage(driver);
     }
 

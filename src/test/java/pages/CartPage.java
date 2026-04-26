@@ -33,8 +33,7 @@ public class CartPage extends BasePage {
     public CartPage(WebDriver driver) {
         super(driver);
         // Wait for cart page to fully load
-        WaitUtil.waitForUrlContains(driver, "cart");
-        try { Thread.sleep(1500); } catch (InterruptedException e) {
+        try { Thread.sleep(2000); } catch (InterruptedException e) {
             Thread.currentThread().interrupt();
         }
     }
