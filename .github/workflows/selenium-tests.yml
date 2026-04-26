@@ -25,7 +25,6 @@ jobs:
 
       - name: Run Smoke Tests
         run: mvn test -Dgroups=smoke -Dbrowser=chrome -Dheadless=true
-	continue-on-error: true
 
       - name: Upload Test Reports
         if: always()
