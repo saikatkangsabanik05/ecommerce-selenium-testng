@@ -34,7 +34,15 @@ public class CheckoutTest extends BaseTest {
 
     private CartPage addItemAndGoToCart() {
         HomePage homePage = loginAndGetHomePage();
+        // Wait for page to fully load before adding to cart
+        try { Thread.sleep(2000); } catch (InterruptedException e) {
+            Thread.currentThread().interrupt();
+        }
         homePage.addProductToCartByIndex(0);
+        // Wait for cart to update before navigating
+        try { Thread.sleep(2000); } catch (InterruptedException e) {
+            Thread.currentThread().interrupt();
+        }
         return homePage.goToCart();
     }
 

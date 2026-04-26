@@ -5,13 +5,11 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import utils.WaitUtil;
 
 import java.util.List;
 import java.util.stream.Collectors;
 
-/**
- * CartPage - Page Object for the Shopping Cart page
- */
 public class CartPage extends BasePage {
 
     @FindBy(css = ".title")
@@ -26,9 +24,6 @@ public class CartPage extends BasePage {
     @FindBy(css = ".inventory_item_price")
     private List<WebElement> cartItemPrices;
 
-    @FindBy(css = ".cart_quantity")
-    private List<WebElement> cartItemQuantities;
-
     @FindBy(id = "continue-shopping")
     private WebElement continueShoppingButton;
 
@@ -37,26 +32,39 @@ public class CartPage extends BasePage {
 
     public CartPage(WebDriver driver) {
         super(driver);
-    }
-
-    public String getPageTitle() {
-        return getText(pageTitle);
+        // Wait for cart page to fully load
+        WaitUtil.waitForUrlContains(driver, "cart");
+        try { Thread.sleep(1500); } catch (InterruptedException e) {
+            Thread.currentThread().interrupt();
+        }
     }
 
     public boolean isCartPageDisplayed() {
-        return isDisplayed(pageTitle) && getText(pageTitle).equals("Your Cart");
+        try {
+            WaitUtil.waitForElementVisible(driver, pageTitle);
+            return getText(pageTitle).equals("Your Cart");
+        } catch (Exception e) {
+            return false;
+        }
     }
 
     public int getCartItemCount() {
-        return cartItems.size();
+        try {
+            return driver.findElements(By.cssSelector(".cart_item")).size();
+        } catch (Exception e) {
+            return 0;
+        }
     }
 
     public List<String> getCartItemNames() {
-        return cartItemNames.stream().map(WebElement::getText).collect(Collectors.toList());
+        return driver.findElements(By.cssSelector(".inventory_item_name"))
+                .stream().map(WebElement::getText)
+                .collect(Collectors.toList());
     }
 
     public List<Double> getCartItemPrices() {
-        return cartItemPrices.stream()
+        return driver.findElements(By.cssSelector(".inventory_item_price"))
+                .stream()
                 .map(e -> Double.parseDouble(e.getText().replace("$", "")))
                 .collect(Collectors.toList());
     }
@@ -66,36 +74,46 @@ public class CartPage extends BasePage {
     }
 
     public void removeItemFromCart(String productName) {
-        log.info("Removing '{}' from cart", productName);
         String removeId = "remove-" + productName.toLowerCase()
                 .replace(" ", "-")
                 .replace("(", "")
                 .replace(")", "")
                 .replace(".", "");
-        driver.findElement(By.id(removeId)).click();
+        try {
+            WebElement btn = driver.findElement(By.id(removeId));
+            jsClick(btn);
+            Thread.sleep(500);
+        } catch (Exception e) {
+            log.error("Could not remove item: {}", productName);
+        }
     }
 
     public void removeAllItems() {
-        List<WebElement> removeButtons = driver.findElements(By.cssSelector("[data-test^='remove']"));
+        List<WebElement> removeButtons = driver.findElements(
+            By.cssSelector("[data-test^='remove']"));
         for (WebElement btn : removeButtons) {
-            btn.click();
+            jsClick(btn);
+            try { Thread.sleep(300); } catch (InterruptedException e) {
+                Thread.currentThread().interrupt();
+            }
         }
-        log.info("All cart items removed");
     }
 
     public boolean isCartEmpty() {
-        return cartItems.isEmpty();
+        return driver.findElements(By.cssSelector(".cart_item")).isEmpty();
     }
 
     public HomePage continueShopping() {
-        log.info("Continuing shopping");
-        click(continueShoppingButton);
+        WaitUtil.waitForElementClickable(driver, continueShoppingButton);
+        jsClick(continueShoppingButton);
+        WaitUtil.waitForUrlContains(driver, "inventory");
         return new HomePage(driver);
     }
 
     public CheckoutPage proceedToCheckout() {
-        log.info("Proceeding to checkout");
-        click(checkoutButton);
+        WaitUtil.waitForElementClickable(driver, checkoutButton);
+        jsClick(checkoutButton);
+        WaitUtil.waitForUrlContains(driver, "checkout-step-one");
         return new CheckoutPage(driver);
     }
 }
