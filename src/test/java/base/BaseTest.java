@@ -9,10 +9,6 @@ import utils.ConfigReader;
 import utils.DriverManager;
 import utils.ScreenshotUtil;
 
-/**
- * BaseTest - Parent class for all test classes.
- * Handles driver lifecycle, navigation, and screenshot on failure.
- */
 public class BaseTest {
 
     protected static final Logger log = LogManager.getLogger(BaseTest.class);
@@ -20,33 +16,51 @@ public class BaseTest {
     @BeforeSuite(alwaysRun = true)
     public void beforeSuite() {
         log.info("========== TEST SUITE STARTED ==========");
-        log.info("Base URL      : {}", ConfigReader.getBaseUrl());
-        log.info("Browser       : {}", ConfigReader.getBrowser());
-        log.info("Headless Mode : {}", ConfigReader.isHeadless());
+        log.info("Base URL : {}", ConfigReader.getBaseUrl());
+        log.info("Browser  : {}", ConfigReader.getBrowser());
     }
 
     @BeforeMethod(alwaysRun = true)
     public void setUp(ITestResult result) {
-        log.info("------ Starting Test: {} ------", result.getMethod().getMethodName());
+        log.info("------ Starting: {} ------",
+            result.getMethod().getMethodName());
+
+        // Fresh browser for every test — no shared state between retries
         DriverManager.initDriver();
+
+        // Navigate to base URL
         getDriver().get(ConfigReader.getBaseUrl());
+
+        // Extra wait for CI environments where page load is slow
+        try { Thread.sleep(1500); } catch (InterruptedException e) {
+            Thread.currentThread().interrupt();
+        }
+
         log.info("Navigated to: {}", ConfigReader.getBaseUrl());
     }
 
     @AfterMethod(alwaysRun = true)
     public void tearDown(ITestResult result) {
         String testName = result.getMethod().getMethodName();
+
         if (result.getStatus() == ITestResult.FAILURE) {
-            log.error("TEST FAILED: {}", testName);
+            log.error("FAILED: {}", testName);
             if (ConfigReader.isScreenshotOnFailure()) {
-                String path = ScreenshotUtil.captureScreenshot(getDriver(), testName);
-                log.info("Failure screenshot: {}", path);
+                try {
+                    String path = ScreenshotUtil.captureScreenshot(
+                        getDriver(), testName);
+                    log.info("Screenshot: {}", path);
+                } catch (Exception e) {
+                    log.warn("Could not capture screenshot: {}", e.getMessage());
+                }
             }
         } else if (result.getStatus() == ITestResult.SUCCESS) {
-            log.info("TEST PASSED: {}", testName);
+            log.info("PASSED: {}", testName);
         } else {
-            log.warn("TEST SKIPPED: {}", testName);
+            log.warn("SKIPPED: {}", testName);
         }
+
+        // Always quit driver — ensures clean state for next test/retry
         DriverManager.quitDriver();
     }
 
