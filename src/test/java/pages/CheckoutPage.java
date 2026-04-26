@@ -4,13 +4,10 @@ import base.BasePage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import utils.WaitUtil;
 
-/**
- * CheckoutPage - Covers both Checkout Step One (info) and Step Two (overview)
- */
 public class CheckoutPage extends BasePage {
 
-    // --- Step One (Shipping Info) ---
     @FindBy(css = ".title")
     private WebElement pageTitle;
 
@@ -32,7 +29,6 @@ public class CheckoutPage extends BasePage {
     @FindBy(css = "[data-test='error']")
     private WebElement errorMessage;
 
-    // --- Step Two (Order Overview) ---
     @FindBy(css = ".summary_subtotal_label")
     private WebElement subtotalLabel;
 
@@ -45,12 +41,8 @@ public class CheckoutPage extends BasePage {
     @FindBy(id = "finish")
     private WebElement finishButton;
 
-    // --- Confirmation ---
     @FindBy(css = ".complete-header")
     private WebElement confirmationHeader;
-
-    @FindBy(css = ".complete-text")
-    private WebElement confirmationText;
 
     @FindBy(id = "back-to-products")
     private WebElement backToHomeButton;
@@ -59,7 +51,6 @@ public class CheckoutPage extends BasePage {
         super(driver);
     }
 
-    // ---- Step One Actions ----
     public String getPageTitle() {
         return getText(pageTitle);
     }
@@ -80,7 +71,8 @@ public class CheckoutPage extends BasePage {
     }
 
     public CheckoutPage fillShippingInfo(String firstName, String lastName, String zipCode) {
-        log.info("Filling shipping info: {} {} {}", firstName, lastName, zipCode);
+        log.info("Filling shipping info");
+        WaitUtil.waitForElementVisible(driver, firstNameField);
         enterFirstName(firstName);
         enterLastName(lastName);
         enterZipCode(zipCode);
@@ -89,12 +81,15 @@ public class CheckoutPage extends BasePage {
 
     public CheckoutPage clickContinue() {
         log.info("Clicking Continue");
-        click(continueButton);
+        // Use JS click for reliability on CI
+        WaitUtil.waitForElementClickable(driver, continueButton);
+        jsClick(continueButton);
+        // Wait for Step 2 to load
+        WaitUtil.waitForUrlContains(driver, "checkout-step-two");
         return this;
     }
 
     public CartPage clickCancel() {
-        log.info("Clicking Cancel");
         click(cancelButton);
         return new CartPage(driver);
     }
@@ -107,35 +102,37 @@ public class CheckoutPage extends BasePage {
         return getText(errorMessage);
     }
 
-    // ---- Step Two Actions ----
     public double getSubtotal() {
-        String text = getText(subtotalLabel);
-        return Double.parseDouble(text.replaceAll("[^0-9.]", ""));
+        WaitUtil.waitForElementVisible(driver, subtotalLabel);
+        return Double.parseDouble(getText(subtotalLabel).replaceAll("[^0-9.]", ""));
     }
 
     public double getTax() {
-        String text = getText(taxLabel);
-        return Double.parseDouble(text.replaceAll("[^0-9.]", ""));
+        WaitUtil.waitForElementVisible(driver, taxLabel);
+        return Double.parseDouble(getText(taxLabel).replaceAll("[^0-9.]", ""));
     }
 
     public double getTotal() {
-        String text = getText(totalLabel);
-        return Double.parseDouble(text.replaceAll("[^0-9.]", ""));
+        WaitUtil.waitForElementVisible(driver, totalLabel);
+        return Double.parseDouble(getText(totalLabel).replaceAll("[^0-9.]", ""));
     }
 
     public CheckoutPage clickFinish() {
         log.info("Clicking Finish");
-        click(finishButton);
+        WaitUtil.waitForElementClickable(driver, finishButton);
+        jsClick(finishButton);
+        WaitUtil.waitForUrlContains(driver, "checkout-complete");
         return this;
     }
 
-    // ---- Confirmation Actions ----
     public boolean isOrderConfirmed() {
+        WaitUtil.waitForElementVisible(driver, confirmationHeader);
         return isDisplayed(confirmationHeader) &&
                getText(confirmationHeader).equalsIgnoreCase("Thank you for your order!");
     }
 
     public String getConfirmationMessage() {
+        WaitUtil.waitForElementVisible(driver, confirmationHeader);
         return getText(confirmationHeader);
     }
 

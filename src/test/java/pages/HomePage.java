@@ -9,6 +9,7 @@ import org.openqa.selenium.support.ui.Select;
 
 import java.util.List;
 import java.util.stream.Collectors;
+import utils.WaitUtil;
 
 /**
  * HomePage - Page Object for the Products/Home page after login
@@ -88,10 +89,16 @@ public class HomePage extends BasePage {
     }
 
     public void addProductToCartByIndex(int index) {
-        List<WebElement> addButtons = driver.findElements(By.cssSelector("[data-test^='add-to-cart']"));
+        List<WebElement> addButtons = driver.findElements(
+            By.cssSelector("[data-test^='add-to-cart']"));
         if (index < addButtons.size()) {
             log.info("Adding product at index {} to cart", index);
-            addButtons.get(index).click();
+            // JS click is more reliable on CI headless browsers
+            jsClick(addButtons.get(index));
+            // Small wait to let cart badge update
+            try { Thread.sleep(800); } catch (InterruptedException e) {
+                Thread.currentThread().interrupt();
+            }
         }
     }
 
@@ -138,8 +145,16 @@ public class HomePage extends BasePage {
 
     public LoginPage logout() {
         log.info("Logging out");
-        click(hamburgerMenu);
-        click(logoutLink);
+        // JS click hamburger menu for reliability on CI
+        WaitUtil.waitForElementClickable(driver, hamburgerMenu);
+        jsClick(hamburgerMenu);
+        // Wait for sidebar to slide open
+        try { Thread.sleep(1000); } catch (InterruptedException e) {
+            Thread.currentThread().interrupt();
+        }
+        WaitUtil.waitForElementClickable(driver, logoutLink);
+        jsClick(logoutLink);
+        WaitUtil.waitForUrlContains(driver, "saucedemo.com");
         return new LoginPage(driver);
     }
 
