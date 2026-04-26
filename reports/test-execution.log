@@ -1,0 +1,271 @@
+2026-04-25 19:05:51 [main] INFO  base.BaseTest - ========== TEST SUITE STARTED ==========
+2026-04-25 19:05:51 [main] INFO  utils.ConfigReader - Configuration loaded successfully from: C:\SeleniumProject\ecommerce-selenium-testng/src/test/resources/config.properties
+2026-04-25 19:05:51 [main] INFO  base.BaseTest - Base URL      : https://www.saucedemo.com
+2026-04-25 19:05:51 [main] INFO  base.BaseTest - Browser       : chrome
+2026-04-25 19:05:51 [main] INFO  base.BaseTest - Headless Mode : false
+2026-04-25 19:05:51 [main] INFO  base.BaseTest - ------ Starting Test: testBothFieldsEmpty ------
+2026-04-25 19:05:51 [main] INFO  utils.DriverManager - Initializing chrome browser (headless=false)
+2026-04-25 19:05:59 [main] INFO  utils.DriverManager - Browser initialized successfully: chrome
+2026-04-25 19:06:00 [main] INFO  base.BaseTest - Navigated to: https://www.saucedemo.com
+2026-04-25 19:06:00 [main] INFO  base.BaseTest - TC_LOGIN_006: Both fields empty test
+2026-04-25 19:06:00 [main] INFO  base.BasePage - Clicking Login button (expecting failure)
+2026-04-25 19:06:01 [main] INFO  base.BaseTest - TC_LOGIN_006 PASSED
+2026-04-25 19:06:01 [main] INFO  base.BaseTest - TEST PASSED: testBothFieldsEmpty
+2026-04-25 19:06:01 [main] INFO  utils.DriverManager - Browser closed and driver removed from ThreadLocal
+2026-04-25 19:06:01 [main] INFO  base.BaseTest - ------ Starting Test: testEmptyPassword ------
+2026-04-25 19:06:01 [main] INFO  utils.DriverManager - Initializing chrome browser (headless=false)
+2026-04-25 19:06:02 [main] INFO  utils.DriverManager - Browser initialized successfully: chrome
+2026-04-25 19:06:04 [main] INFO  base.BaseTest - Navigated to: https://www.saucedemo.com
+2026-04-25 19:06:04 [main] INFO  base.BaseTest - TC_LOGIN_005: Empty password test
+2026-04-25 19:06:04 [main] INFO  base.BasePage - Entering username: standard_user
+2026-04-25 19:06:04 [main] INFO  base.BasePage - Clicking Login button (expecting failure)
+2026-04-25 19:06:04 [main] INFO  base.BaseTest - TC_LOGIN_005 PASSED
+2026-04-25 19:06:04 [main] INFO  base.BaseTest - TEST PASSED: testEmptyPassword
+2026-04-25 19:06:04 [main] INFO  utils.DriverManager - Browser closed and driver removed from ThreadLocal
+2026-04-25 19:06:04 [main] INFO  base.BaseTest - ------ Starting Test: testEmptyUsername ------
+2026-04-25 19:06:04 [main] INFO  utils.DriverManager - Initializing chrome browser (headless=false)
+2026-04-25 19:06:05 [main] INFO  utils.DriverManager - Browser initialized successfully: chrome
+2026-04-25 19:06:06 [main] INFO  base.BaseTest - Navigated to: https://www.saucedemo.com
+2026-04-25 19:06:06 [main] INFO  base.BaseTest - TC_LOGIN_004: Empty username test
+2026-04-25 19:06:06 [main] INFO  base.BasePage - Entering password
+2026-04-25 19:06:06 [main] INFO  base.BasePage - Clicking Login button (expecting failure)
+2026-04-25 19:06:06 [main] INFO  base.BaseTest - TC_LOGIN_004 PASSED
+2026-04-25 19:06:06 [main] INFO  base.BaseTest - TEST PASSED: testEmptyUsername
+2026-04-25 19:06:07 [main] INFO  utils.DriverManager - Browser closed and driver removed from ThreadLocal
+2026-04-25 19:06:07 [main] INFO  base.BaseTest - ------ Starting Test: testInvalidCredentials ------
+2026-04-25 19:06:07 [main] INFO  utils.DriverManager - Initializing chrome browser (headless=false)
+2026-04-25 19:06:08 [main] INFO  utils.DriverManager - Browser initialized successfully: chrome
+2026-04-25 19:06:08 [main] INFO  base.BaseTest - Navigated to: https://www.saucedemo.com
+2026-04-25 19:06:08 [main] INFO  base.BaseTest - TC_LOGIN_003: Invalid credentials test
+2026-04-25 19:06:08 [main] INFO  base.BasePage - Entering username: invalid_user
+2026-04-25 19:06:09 [main] INFO  base.BasePage - Entering password
+2026-04-25 19:06:09 [main] INFO  base.BasePage - Clicking Login button (expecting failure)
+2026-04-25 19:06:09 [main] INFO  base.BaseTest - TC_LOGIN_003 PASSED
+2026-04-25 19:06:09 [main] INFO  base.BaseTest - TEST PASSED: testInvalidCredentials
+2026-04-25 19:06:09 [main] INFO  utils.DriverManager - Browser closed and driver removed from ThreadLocal
+2026-04-25 19:06:09 [main] INFO  base.BaseTest - ------ Starting Test: testInvalidLoginDataDriven ------
+2026-04-25 19:06:09 [main] INFO  utils.DriverManager - Initializing chrome browser (headless=false)
+2026-04-25 19:06:10 [main] INFO  utils.DriverManager - Browser initialized successfully: chrome
+2026-04-25 19:06:11 [main] INFO  base.BaseTest - Navigated to: https://www.saucedemo.com
+2026-04-25 19:06:11 [main] INFO  base.BaseTest - TC_LOGIN_008: Data-driven login - user='', expectedError='Username is required'
+2026-04-25 19:06:11 [main] INFO  base.BasePage - Entering username: 
+2026-04-25 19:06:11 [main] INFO  base.BasePage - Entering password
+2026-04-25 19:06:11 [main] INFO  base.BasePage - Clicking Login button (expecting failure)
+2026-04-25 19:06:12 [main] INFO  base.BaseTest - TC_LOGIN_008 data row PASSED
+2026-04-25 19:06:12 [main] INFO  base.BaseTest - TEST PASSED: testInvalidLoginDataDriven
+2026-04-25 19:06:12 [main] INFO  utils.DriverManager - Browser closed and driver removed from ThreadLocal
+2026-04-25 19:06:12 [main] INFO  base.BaseTest - ------ Starting Test: testInvalidLoginDataDriven ------
+2026-04-25 19:06:12 [main] INFO  utils.DriverManager - Initializing chrome browser (headless=false)
+2026-04-25 19:06:13 [main] INFO  utils.DriverManager - Browser initialized successfully: chrome
+2026-04-25 19:06:13 [main] INFO  base.BaseTest - Navigated to: https://www.saucedemo.com
+2026-04-25 19:06:13 [main] INFO  base.BaseTest - TC_LOGIN_008: Data-driven login - user='standard_user', expectedError='Password is required'
+2026-04-25 19:06:13 [main] INFO  base.BasePage - Entering username: standard_user
+2026-04-25 19:06:14 [main] INFO  base.BasePage - Entering password
+2026-04-25 19:06:14 [main] INFO  base.BasePage - Clicking Login button (expecting failure)
+2026-04-25 19:06:14 [main] INFO  base.BaseTest - TC_LOGIN_008 data row PASSED
+2026-04-25 19:06:14 [main] INFO  base.BaseTest - TEST PASSED: testInvalidLoginDataDriven
+2026-04-25 19:06:15 [main] INFO  utils.DriverManager - Browser closed and driver removed from ThreadLocal
+2026-04-25 19:06:15 [main] INFO  base.BaseTest - ------ Starting Test: testInvalidLoginDataDriven ------
+2026-04-25 19:06:15 [main] INFO  utils.DriverManager - Initializing chrome browser (headless=false)
+2026-04-25 19:06:16 [main] INFO  utils.DriverManager - Browser initialized successfully: chrome
+2026-04-25 19:06:17 [main] INFO  base.BaseTest - Navigated to: https://www.saucedemo.com
+2026-04-25 19:06:17 [main] INFO  base.BaseTest - TC_LOGIN_008: Data-driven login - user='', expectedError='Username is required'
+2026-04-25 19:06:17 [main] INFO  base.BasePage - Entering username: 
+2026-04-25 19:06:17 [main] INFO  base.BasePage - Entering password
+2026-04-25 19:06:17 [main] INFO  base.BasePage - Clicking Login button (expecting failure)
+2026-04-25 19:06:17 [main] INFO  base.BaseTest - TC_LOGIN_008 data row PASSED
+2026-04-25 19:06:17 [main] INFO  base.BaseTest - TEST PASSED: testInvalidLoginDataDriven
+2026-04-25 19:06:18 [main] INFO  utils.DriverManager - Browser closed and driver removed from ThreadLocal
+2026-04-25 19:06:18 [main] INFO  base.BaseTest - ------ Starting Test: testInvalidLoginDataDriven ------
+2026-04-25 19:06:18 [main] INFO  utils.DriverManager - Initializing chrome browser (headless=false)
+2026-04-25 19:06:19 [main] INFO  utils.DriverManager - Browser initialized successfully: chrome
+2026-04-25 19:06:19 [main] INFO  base.BaseTest - Navigated to: https://www.saucedemo.com
+2026-04-25 19:06:19 [main] INFO  base.BaseTest - TC_LOGIN_008: Data-driven login - user='bad_user', expectedError='Username and password do not match'
+2026-04-25 19:06:19 [main] INFO  base.BasePage - Entering username: bad_user
+2026-04-25 19:06:20 [main] INFO  base.BasePage - Entering password
+2026-04-25 19:06:20 [main] INFO  base.BasePage - Clicking Login button (expecting failure)
+2026-04-25 19:06:20 [main] INFO  base.BaseTest - TC_LOGIN_008 data row PASSED
+2026-04-25 19:06:20 [main] INFO  base.BaseTest - TEST PASSED: testInvalidLoginDataDriven
+2026-04-25 19:06:21 [main] INFO  utils.DriverManager - Browser closed and driver removed from ThreadLocal
+2026-04-25 19:06:21 [main] INFO  base.BaseTest - ------ Starting Test: testInvalidLoginDataDriven ------
+2026-04-25 19:06:21 [main] INFO  utils.DriverManager - Initializing chrome browser (headless=false)
+2026-04-25 19:06:22 [main] INFO  utils.DriverManager - Browser initialized successfully: chrome
+2026-04-25 19:06:23 [main] INFO  base.BaseTest - Navigated to: https://www.saucedemo.com
+2026-04-25 19:06:23 [main] INFO  base.BaseTest - TC_LOGIN_008: Data-driven login - user='locked_out_user', expectedError='locked out'
+2026-04-25 19:06:23 [main] INFO  base.BasePage - Entering username: locked_out_user
+2026-04-25 19:06:23 [main] INFO  base.BasePage - Entering password
+2026-04-25 19:06:23 [main] INFO  base.BasePage - Clicking Login button (expecting failure)
+2026-04-25 19:06:23 [main] INFO  base.BaseTest - TC_LOGIN_008 data row PASSED
+2026-04-25 19:06:23 [main] INFO  base.BaseTest - TEST PASSED: testInvalidLoginDataDriven
+2026-04-25 19:06:24 [main] INFO  utils.DriverManager - Browser closed and driver removed from ThreadLocal
+2026-04-25 19:06:24 [main] INFO  base.BaseTest - ------ Starting Test: testLockedOutUserLogin ------
+2026-04-25 19:06:24 [main] INFO  utils.DriverManager - Initializing chrome browser (headless=false)
+2026-04-25 19:06:25 [main] INFO  utils.DriverManager - Browser initialized successfully: chrome
+2026-04-25 19:06:25 [main] INFO  base.BaseTest - Navigated to: https://www.saucedemo.com
+2026-04-25 19:06:25 [main] INFO  base.BaseTest - TC_LOGIN_002: Locked-out user login test
+2026-04-25 19:06:25 [main] INFO  base.BasePage - Entering username: locked_out_user
+2026-04-25 19:06:25 [main] INFO  base.BasePage - Entering password
+2026-04-25 19:06:26 [main] INFO  base.BasePage - Clicking Login button (expecting failure)
+2026-04-25 19:06:26 [main] INFO  base.BaseTest - TC_LOGIN_002 PASSED: Locked user error displayed correctly
+2026-04-25 19:06:26 [main] INFO  base.BaseTest - TEST PASSED: testLockedOutUserLogin
+2026-04-25 19:06:26 [main] INFO  utils.DriverManager - Browser closed and driver removed from ThreadLocal
+2026-04-25 19:06:26 [main] INFO  base.BaseTest - ------ Starting Test: testLogout ------
+2026-04-25 19:06:26 [main] INFO  utils.DriverManager - Initializing chrome browser (headless=false)
+2026-04-25 19:06:27 [main] INFO  utils.DriverManager - Browser initialized successfully: chrome
+2026-04-25 19:06:28 [main] INFO  base.BaseTest - Navigated to: https://www.saucedemo.com
+2026-04-25 19:06:28 [main] INFO  base.BaseTest - TC_LOGIN_007: Logout test
+2026-04-25 19:06:28 [main] INFO  base.BasePage - Entering username: standard_user
+2026-04-25 19:06:28 [main] INFO  base.BasePage - Entering password
+2026-04-25 19:06:28 [main] INFO  base.BasePage - Clicking Login button
+2026-04-25 19:06:28 [main] INFO  base.BasePage - Logging out
+2026-04-25 19:06:29 [main] INFO  base.BaseTest - TC_LOGIN_007 PASSED: Logout successful
+2026-04-25 19:06:29 [main] INFO  base.BaseTest - TEST PASSED: testLogout
+2026-04-25 19:06:30 [main] INFO  utils.DriverManager - Browser closed and driver removed from ThreadLocal
+2026-04-25 19:06:30 [main] INFO  base.BaseTest - ------ Starting Test: testValidLogin ------
+2026-04-25 19:06:30 [main] INFO  utils.DriverManager - Initializing chrome browser (headless=false)
+2026-04-25 19:06:31 [main] INFO  utils.DriverManager - Browser initialized successfully: chrome
+2026-04-25 19:06:32 [main] INFO  base.BaseTest - Navigated to: https://www.saucedemo.com
+2026-04-25 19:06:32 [main] INFO  base.BaseTest - TC_LOGIN_001: Valid login test
+2026-04-25 19:06:32 [main] INFO  base.BasePage - Entering username: standard_user
+2026-04-25 19:06:32 [main] INFO  base.BasePage - Entering password
+2026-04-25 19:06:32 [main] INFO  base.BasePage - Clicking Login button
+2026-04-25 19:06:32 [main] INFO  base.BaseTest - TC_LOGIN_001 PASSED: User logged in successfully
+2026-04-25 19:06:32 [main] INFO  base.BaseTest - TEST PASSED: testValidLogin
+2026-04-25 19:06:33 [main] INFO  utils.DriverManager - Browser closed and driver removed from ThreadLocal
+2026-04-25 19:06:33 [main] INFO  base.BaseTest - ========== TEST SUITE COMPLETED ==========
+2026-04-25 22:04:22 [main] INFO  base.BaseTest - ========== TEST SUITE STARTED ==========
+2026-04-25 22:04:22 [main] INFO  utils.ConfigReader - Configuration loaded successfully from: C:\SeleniumProject\ecommerce-selenium-testng/src/test/resources/config.properties
+2026-04-25 22:04:22 [main] INFO  base.BaseTest - Base URL      : https://www.saucedemo.com
+2026-04-25 22:04:22 [main] INFO  base.BaseTest - Browser       : chrome
+2026-04-25 22:04:22 [main] INFO  base.BaseTest - Headless Mode : false
+2026-04-25 22:04:22 [main] INFO  base.BaseTest - ------ Starting Test: testBothFieldsEmpty ------
+2026-04-25 22:04:22 [main] INFO  utils.DriverManager - Initializing chrome browser (headless=false)
+2026-04-25 22:04:24 [main] INFO  utils.DriverManager - Browser initialized successfully: chrome
+2026-04-25 22:04:25 [main] INFO  base.BaseTest - Navigated to: https://www.saucedemo.com
+2026-04-25 22:04:25 [main] INFO  base.BaseTest - TC_LOGIN_006: Both fields empty test
+2026-04-25 22:04:25 [main] INFO  base.BasePage - Clicking Login button (expecting failure)
+2026-04-25 22:04:25 [main] INFO  base.BaseTest - TC_LOGIN_006 PASSED
+2026-04-25 22:04:25 [main] INFO  base.BaseTest - TEST PASSED: testBothFieldsEmpty
+2026-04-25 22:04:26 [main] INFO  utils.DriverManager - Browser closed and driver removed from ThreadLocal
+2026-04-25 22:04:26 [main] INFO  base.BaseTest - ------ Starting Test: testEmptyPassword ------
+2026-04-25 22:04:26 [main] INFO  utils.DriverManager - Initializing chrome browser (headless=false)
+2026-04-25 22:04:27 [main] INFO  utils.DriverManager - Browser initialized successfully: chrome
+2026-04-25 22:04:27 [main] INFO  base.BaseTest - Navigated to: https://www.saucedemo.com
+2026-04-25 22:04:27 [main] INFO  base.BaseTest - TC_LOGIN_005: Empty password test
+2026-04-25 22:04:27 [main] INFO  base.BasePage - Entering username: standard_user
+2026-04-25 22:04:27 [main] INFO  base.BasePage - Clicking Login button (expecting failure)
+2026-04-25 22:04:27 [main] INFO  base.BaseTest - TC_LOGIN_005 PASSED
+2026-04-25 22:04:27 [main] INFO  base.BaseTest - TEST PASSED: testEmptyPassword
+2026-04-25 22:04:28 [main] INFO  utils.DriverManager - Browser closed and driver removed from ThreadLocal
+2026-04-25 22:04:28 [main] INFO  base.BaseTest - ------ Starting Test: testEmptyUsername ------
+2026-04-25 22:04:28 [main] INFO  utils.DriverManager - Initializing chrome browser (headless=false)
+2026-04-25 22:04:28 [main] INFO  utils.DriverManager - Browser initialized successfully: chrome
+2026-04-25 22:04:29 [main] INFO  base.BaseTest - Navigated to: https://www.saucedemo.com
+2026-04-25 22:04:29 [main] INFO  base.BaseTest - TC_LOGIN_004: Empty username test
+2026-04-25 22:04:29 [main] INFO  base.BasePage - Entering password
+2026-04-25 22:04:29 [main] INFO  base.BasePage - Clicking Login button (expecting failure)
+2026-04-25 22:04:29 [main] INFO  base.BaseTest - TC_LOGIN_004 PASSED
+2026-04-25 22:04:29 [main] INFO  base.BaseTest - TEST PASSED: testEmptyUsername
+2026-04-25 22:04:30 [main] INFO  utils.DriverManager - Browser closed and driver removed from ThreadLocal
+2026-04-25 22:04:30 [main] INFO  base.BaseTest - ------ Starting Test: testInvalidCredentials ------
+2026-04-25 22:04:30 [main] INFO  utils.DriverManager - Initializing chrome browser (headless=false)
+2026-04-25 22:04:30 [main] INFO  utils.DriverManager - Browser initialized successfully: chrome
+2026-04-25 22:04:31 [main] INFO  base.BaseTest - Navigated to: https://www.saucedemo.com
+2026-04-25 22:04:31 [main] INFO  base.BaseTest - TC_LOGIN_003: Invalid credentials test
+2026-04-25 22:04:31 [main] INFO  base.BasePage - Entering username: invalid_user
+2026-04-25 22:04:31 [main] INFO  base.BasePage - Entering password
+2026-04-25 22:04:31 [main] INFO  base.BasePage - Clicking Login button (expecting failure)
+2026-04-25 22:04:31 [main] INFO  base.BaseTest - TC_LOGIN_003 PASSED
+2026-04-25 22:04:31 [main] INFO  base.BaseTest - TEST PASSED: testInvalidCredentials
+2026-04-25 22:04:32 [main] INFO  utils.DriverManager - Browser closed and driver removed from ThreadLocal
+2026-04-25 22:04:32 [main] INFO  base.BaseTest - ------ Starting Test: testInvalidLoginDataDriven ------
+2026-04-25 22:04:32 [main] INFO  utils.DriverManager - Initializing chrome browser (headless=false)
+2026-04-25 22:04:32 [main] INFO  utils.DriverManager - Browser initialized successfully: chrome
+2026-04-25 22:04:33 [main] INFO  base.BaseTest - Navigated to: https://www.saucedemo.com
+2026-04-25 22:04:33 [main] INFO  base.BaseTest - TC_LOGIN_008: Data-driven login - user='', expectedError='Username is required'
+2026-04-25 22:04:33 [main] INFO  base.BasePage - Entering username: 
+2026-04-25 22:04:33 [main] INFO  base.BasePage - Entering password
+2026-04-25 22:04:33 [main] INFO  base.BasePage - Clicking Login button (expecting failure)
+2026-04-25 22:04:33 [main] INFO  base.BaseTest - TC_LOGIN_008 data row PASSED
+2026-04-25 22:04:33 [main] INFO  base.BaseTest - TEST PASSED: testInvalidLoginDataDriven
+2026-04-25 22:04:34 [main] INFO  utils.DriverManager - Browser closed and driver removed from ThreadLocal
+2026-04-25 22:04:34 [main] INFO  base.BaseTest - ------ Starting Test: testInvalidLoginDataDriven ------
+2026-04-25 22:04:34 [main] INFO  utils.DriverManager - Initializing chrome browser (headless=false)
+2026-04-25 22:04:34 [main] INFO  utils.DriverManager - Browser initialized successfully: chrome
+2026-04-25 22:04:35 [main] INFO  base.BaseTest - Navigated to: https://www.saucedemo.com
+2026-04-25 22:04:35 [main] INFO  base.BaseTest - TC_LOGIN_008: Data-driven login - user='standard_user', expectedError='Password is required'
+2026-04-25 22:04:35 [main] INFO  base.BasePage - Entering username: standard_user
+2026-04-25 22:04:35 [main] INFO  base.BasePage - Entering password
+2026-04-25 22:04:35 [main] INFO  base.BasePage - Clicking Login button (expecting failure)
+2026-04-25 22:04:35 [main] INFO  base.BaseTest - TC_LOGIN_008 data row PASSED
+2026-04-25 22:04:35 [main] INFO  base.BaseTest - TEST PASSED: testInvalidLoginDataDriven
+2026-04-25 22:04:36 [main] INFO  utils.DriverManager - Browser closed and driver removed from ThreadLocal
+2026-04-25 22:04:36 [main] INFO  base.BaseTest - ------ Starting Test: testInvalidLoginDataDriven ------
+2026-04-25 22:04:36 [main] INFO  utils.DriverManager - Initializing chrome browser (headless=false)
+2026-04-25 22:04:36 [main] INFO  utils.DriverManager - Browser initialized successfully: chrome
+2026-04-25 22:04:38 [main] INFO  base.BaseTest - Navigated to: https://www.saucedemo.com
+2026-04-25 22:04:38 [main] INFO  base.BaseTest - TC_LOGIN_008: Data-driven login - user='', expectedError='Username is required'
+2026-04-25 22:04:38 [main] INFO  base.BasePage - Entering username: 
+2026-04-25 22:04:38 [main] INFO  base.BasePage - Entering password
+2026-04-25 22:04:38 [main] INFO  base.BasePage - Clicking Login button (expecting failure)
+2026-04-25 22:04:38 [main] INFO  base.BaseTest - TC_LOGIN_008 data row PASSED
+2026-04-25 22:04:38 [main] INFO  base.BaseTest - TEST PASSED: testInvalidLoginDataDriven
+2026-04-25 22:04:38 [main] INFO  utils.DriverManager - Browser closed and driver removed from ThreadLocal
+2026-04-25 22:04:38 [main] INFO  base.BaseTest - ------ Starting Test: testInvalidLoginDataDriven ------
+2026-04-25 22:04:38 [main] INFO  utils.DriverManager - Initializing chrome browser (headless=false)
+2026-04-25 22:04:39 [main] INFO  utils.DriverManager - Browser initialized successfully: chrome
+2026-04-25 22:04:40 [main] INFO  base.BaseTest - Navigated to: https://www.saucedemo.com
+2026-04-25 22:04:40 [main] INFO  base.BaseTest - TC_LOGIN_008: Data-driven login - user='bad_user', expectedError='Username and password do not match'
+2026-04-25 22:04:40 [main] INFO  base.BasePage - Entering username: bad_user
+2026-04-25 22:04:40 [main] INFO  base.BasePage - Entering password
+2026-04-25 22:04:40 [main] INFO  base.BasePage - Clicking Login button (expecting failure)
+2026-04-25 22:04:40 [main] INFO  base.BaseTest - TC_LOGIN_008 data row PASSED
+2026-04-25 22:04:40 [main] INFO  base.BaseTest - TEST PASSED: testInvalidLoginDataDriven
+2026-04-25 22:04:41 [main] INFO  utils.DriverManager - Browser closed and driver removed from ThreadLocal
+2026-04-25 22:04:41 [main] INFO  base.BaseTest - ------ Starting Test: testInvalidLoginDataDriven ------
+2026-04-25 22:04:41 [main] INFO  utils.DriverManager - Initializing chrome browser (headless=false)
+2026-04-25 22:04:42 [main] INFO  utils.DriverManager - Browser initialized successfully: chrome
+2026-04-25 22:04:42 [main] INFO  base.BaseTest - Navigated to: https://www.saucedemo.com
+2026-04-25 22:04:42 [main] INFO  base.BaseTest - TC_LOGIN_008: Data-driven login - user='locked_out_user', expectedError='locked out'
+2026-04-25 22:04:42 [main] INFO  base.BasePage - Entering username: locked_out_user
+2026-04-25 22:04:42 [main] INFO  base.BasePage - Entering password
+2026-04-25 22:04:42 [main] INFO  base.BasePage - Clicking Login button (expecting failure)
+2026-04-25 22:04:43 [main] INFO  base.BaseTest - TC_LOGIN_008 data row PASSED
+2026-04-25 22:04:43 [main] INFO  base.BaseTest - TEST PASSED: testInvalidLoginDataDriven
+2026-04-25 22:04:43 [main] INFO  utils.DriverManager - Browser closed and driver removed from ThreadLocal
+2026-04-25 22:04:43 [main] INFO  base.BaseTest - ------ Starting Test: testLockedOutUserLogin ------
+2026-04-25 22:04:43 [main] INFO  utils.DriverManager - Initializing chrome browser (headless=false)
+2026-04-25 22:04:44 [main] INFO  utils.DriverManager - Browser initialized successfully: chrome
+2026-04-25 22:04:44 [main] INFO  base.BaseTest - Navigated to: https://www.saucedemo.com
+2026-04-25 22:04:44 [main] INFO  base.BaseTest - TC_LOGIN_002: Locked-out user login test
+2026-04-25 22:04:44 [main] INFO  base.BasePage - Entering username: locked_out_user
+2026-04-25 22:04:44 [main] INFO  base.BasePage - Entering password
+2026-04-25 22:04:45 [main] INFO  base.BasePage - Clicking Login button (expecting failure)
+2026-04-25 22:04:45 [main] INFO  base.BaseTest - TC_LOGIN_002 PASSED: Locked user error displayed correctly
+2026-04-25 22:04:45 [main] INFO  base.BaseTest - TEST PASSED: testLockedOutUserLogin
+2026-04-25 22:04:45 [main] INFO  utils.DriverManager - Browser closed and driver removed from ThreadLocal
+2026-04-25 22:04:45 [main] INFO  base.BaseTest - ------ Starting Test: testLogout ------
+2026-04-25 22:04:45 [main] INFO  utils.DriverManager - Initializing chrome browser (headless=false)
+2026-04-25 22:04:46 [main] INFO  utils.DriverManager - Browser initialized successfully: chrome
+2026-04-25 22:04:46 [main] INFO  base.BaseTest - Navigated to: https://www.saucedemo.com
+2026-04-25 22:04:46 [main] INFO  base.BaseTest - TC_LOGIN_007: Logout test
+2026-04-25 22:04:46 [main] INFO  base.BasePage - Entering username: standard_user
+2026-04-25 22:04:47 [main] INFO  base.BasePage - Entering password
+2026-04-25 22:04:47 [main] INFO  base.BasePage - Clicking Login button
+2026-04-25 22:04:47 [main] INFO  base.BasePage - Logging out
+2026-04-25 22:04:58 [main] ERROR base.BaseTest - TEST FAILED: testLogout
+2026-04-25 22:04:58 [main] INFO  utils.ScreenshotUtil - Screenshot saved: C:\SeleniumProject\ecommerce-selenium-testng\screenshots\testLogout_20260425_220458.png
+2026-04-25 22:04:58 [main] INFO  base.BaseTest - Failure screenshot: C:\SeleniumProject\ecommerce-selenium-testng\screenshots\testLogout_20260425_220458.png
+2026-04-25 22:04:58 [main] INFO  utils.DriverManager - Browser closed and driver removed from ThreadLocal
+2026-04-25 22:04:58 [main] INFO  base.BaseTest - ------ Starting Test: testValidLogin ------
+2026-04-25 22:04:58 [main] INFO  utils.DriverManager - Initializing chrome browser (headless=false)
+2026-04-25 22:04:59 [main] INFO  utils.DriverManager - Browser initialized successfully: chrome
+2026-04-25 22:04:59 [main] INFO  base.BaseTest - Navigated to: https://www.saucedemo.com
+2026-04-25 22:04:59 [main] INFO  base.BaseTest - TC_LOGIN_001: Valid login test
+2026-04-25 22:04:59 [main] INFO  base.BasePage - Entering username: standard_user
+2026-04-25 22:05:00 [main] INFO  base.BasePage - Entering password
+2026-04-25 22:05:00 [main] INFO  base.BasePage - Clicking Login button
+2026-04-25 22:05:00 [main] INFO  base.BaseTest - TC_LOGIN_001 PASSED: User logged in successfully
+2026-04-25 22:05:00 [main] INFO  base.BaseTest - TEST PASSED: testValidLogin
+2026-04-25 22:05:00 [main] INFO  utils.DriverManager - Browser closed and driver removed from ThreadLocal
+2026-04-25 22:05:00 [main] INFO  base.BaseTest - ========== TEST SUITE COMPLETED ==========
