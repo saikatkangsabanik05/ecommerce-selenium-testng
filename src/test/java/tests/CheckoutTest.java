@@ -98,70 +98,59 @@ public class CheckoutTest extends BaseTest {
     // TC_CHK_003
     // -------------------------------------------------------
     @Test(groups = {"regression"},
-          description = "TC_CHK_003 - Verify error when first name is missing")
+    	      description = "TC_CHK_003 - Verify error when first name is missing")
     public void testErrorWhenFirstNameMissing() {
-        log.info("TC_CHK_003: Error for missing first name");
-
-        CartPage cartPage = addItemAndGoToCart();
-        CheckoutPage checkoutPage = cartPage.proceedToCheckout();
-
-        checkoutPage.enterLastName("Doe")
-                    .enterZipCode("10001")
-                    .clickContinue();
-
-        Assert.assertTrue(checkoutPage.isErrorDisplayed(),
-            "Error should be shown when first name is missing");
-        Assert.assertTrue(checkoutPage.getErrorMessage().contains("First Name is required"),
-            "Error should mention First Name");
-
-        log.info("TC_CHK_003 PASSED");
-    }
+	    log.info("TC_CHK_003: Error for missing first name");
+	    CartPage cartPage = addItemAndGoToCart();
+	    CheckoutPage checkoutPage = cartPage.proceedToCheckout();
+	    // Only fill last name and zip — leave first name empty
+	    checkoutPage.enterLastName("Doe")
+	                .enterZipCode("10001")
+	                .clickContinueForValidation();  // use real button click
+	    Assert.assertTrue(checkoutPage.isErrorDisplayed(),
+	        "Error should be shown when first name is missing");
+	    Assert.assertTrue(checkoutPage.getErrorMessage().contains("First Name is required"),
+	        "Error should mention First Name");
+	    log.info("TC_CHK_003 PASSED");
+	}
 
     // -------------------------------------------------------
     // TC_CHK_004
     // -------------------------------------------------------
     @Test(groups = {"regression"},
-          description = "TC_CHK_004 - Verify error when last name is missing")
+    	      description = "TC_CHK_004 - Verify error when last name is missing")
     public void testErrorWhenLastNameMissing() {
-        log.info("TC_CHK_004: Error for missing last name");
-
-        CartPage cartPage = addItemAndGoToCart();
-        CheckoutPage checkoutPage = cartPage.proceedToCheckout();
-
-        checkoutPage.enterFirstName("John")
-                    .enterZipCode("10001")
-                    .clickContinue();
-
-        Assert.assertTrue(checkoutPage.isErrorDisplayed(),
-            "Error should be shown when last name is missing");
-        Assert.assertTrue(checkoutPage.getErrorMessage().contains("Last Name is required"),
-            "Error should mention Last Name");
-
-        log.info("TC_CHK_004 PASSED");
-    }
+	    log.info("TC_CHK_004: Error for missing last name");
+	    CartPage cartPage = addItemAndGoToCart();
+	    CheckoutPage checkoutPage = cartPage.proceedToCheckout();
+	    checkoutPage.enterFirstName("John")
+	                .enterZipCode("10001")
+	                .clickContinueForValidation();  // use real button click
+	    Assert.assertTrue(checkoutPage.isErrorDisplayed(),
+	        "Error should be shown when last name is missing");
+	    Assert.assertTrue(checkoutPage.getErrorMessage().contains("Last Name is required"),
+	        "Error should mention Last Name");
+	    log.info("TC_CHK_004 PASSED");
+	}
 
     // -------------------------------------------------------
     // TC_CHK_005
     // -------------------------------------------------------
     @Test(groups = {"regression"},
-          description = "TC_CHK_005 - Verify error when zip/postal code is missing")
+    	      description = "TC_CHK_005 - Verify error when zip code is missing")
     public void testErrorWhenZipCodeMissing() {
-        log.info("TC_CHK_005: Error for missing zip code");
-
-        CartPage cartPage = addItemAndGoToCart();
-        CheckoutPage checkoutPage = cartPage.proceedToCheckout();
-
-        checkoutPage.enterFirstName("John")
-                    .enterLastName("Doe")
-                    .clickContinue();
-
-        Assert.assertTrue(checkoutPage.isErrorDisplayed(),
-            "Error should be shown when zip code is missing");
-        Assert.assertTrue(checkoutPage.getErrorMessage().contains("Postal Code is required"),
-            "Error should mention Postal Code");
-
-        log.info("TC_CHK_005 PASSED");
-    }
+	    log.info("TC_CHK_005: Error for missing zip code");
+	    CartPage cartPage = addItemAndGoToCart();
+	    CheckoutPage checkoutPage = cartPage.proceedToCheckout();
+	    checkoutPage.enterFirstName("John")
+	                .enterLastName("Doe")
+	                .clickContinueForValidation();  // use real button click
+	    Assert.assertTrue(checkoutPage.isErrorDisplayed(),
+	        "Error should be shown when zip code is missing");
+	    Assert.assertTrue(checkoutPage.getErrorMessage().contains("Postal Code is required"),
+	        "Error should mention Postal Code");
+	    log.info("TC_CHK_005 PASSED");
+	}
 
     // -------------------------------------------------------
     // TC_CHK_006

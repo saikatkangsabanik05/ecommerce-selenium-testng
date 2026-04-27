@@ -1,6 +1,8 @@
 package pages;
 
 import base.BasePage;
+import utils.WaitUtil;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -46,7 +48,11 @@ public class ProductDetailPage extends BasePage {
 
     public ProductDetailPage addToCart() {
         log.info("Adding product to cart from detail page");
-        click(addToCartButton);
+        WaitUtil.waitForElementClickable(driver, addToCartButton);
+        jsClick(addToCartButton);
+        try { Thread.sleep(1500); } catch (InterruptedException e) {
+            Thread.currentThread().interrupt();
+        }
         return this;
     }
 

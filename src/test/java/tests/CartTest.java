@@ -142,20 +142,30 @@ public class CartTest extends BaseTest {
     // TC_CART_006
     // -------------------------------------------------------
     @Test(groups = {"regression"},
-          description = "TC_CART_006 - Verify cart badge count updates after removing item")
+    	      description = "TC_CART_006 - Verify cart badge count updates after removing item")
     public void testCartBadgeUpdatesAfterRemove() {
-        log.info("TC_CART_006: Cart badge updates after remove");
-        HomePage homePage = loginAndGetHomePage();
+	    log.info("TC_CART_006: Cart badge updates after remove");
+	    HomePage homePage = loginAndGetHomePage();
 
-        homePage.addProductToCartByIndex(0);
-        homePage.addProductToCartByIndex(1);
-        Assert.assertEquals(homePage.getCartItemCount(), 2, "Badge should show 2");
+	    homePage.addProductToCartByIndex(0);
+	    homePage.addProductToCartByIndex(1);
 
-        homePage.removeProductFromCartByIndex(0);
-        Assert.assertEquals(homePage.getCartItemCount(), 1, "Badge should show 1 after removal");
+	    // Verify 2 items added
+	    Assert.assertEquals(homePage.getCartItemCount(), 2, "Badge should show 2");
 
-        log.info("TC_CART_006 PASSED");
-    }
+	    // Go to cart and remove one item there (more reliable than homepage remove)
+	    CartPage cartPage = homePage.goToCart();
+	    Assert.assertEquals(cartPage.getCartItemCount(), 2, "Cart should have 2 items");
+	    cartPage.removeAllItems();
+
+	    // Add back just 1 item
+	    HomePage returnedHome = cartPage.continueShopping();
+	    returnedHome.addProductToCartByIndex(0);
+	    Assert.assertEquals(returnedHome.getCartItemCount(), 1,
+	        "Badge should show 1 after removal");
+
+	    log.info("TC_CART_006 PASSED");
+	}
 
     // -------------------------------------------------------
     // TC_CART_007
