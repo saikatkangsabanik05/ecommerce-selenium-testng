@@ -6,6 +6,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import utils.WaitUtil;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.interactions.Actions;
 
 public class CheckoutPage extends BasePage {
 
@@ -59,24 +61,48 @@ public class CheckoutPage extends BasePage {
     public CheckoutPage enterFirstName(String firstName) {
         log.info("Entering first name: {}", firstName);
         WaitUtil.waitForElementVisible(driver, firstNameField);
-        firstNameField.click();
-        firstNameField.sendKeys(firstName);
+        new Actions(driver)
+            .click(firstNameField)
+            .keyDown(Keys.CONTROL).sendKeys("a").keyUp(Keys.CONTROL)
+            .sendKeys(Keys.DELETE)
+            .sendKeys(firstName)
+            .sendKeys(Keys.TAB)
+            .perform();
+        try { Thread.sleep(300); } catch (InterruptedException e) {
+            Thread.currentThread().interrupt();
+        }
         return this;
     }
 
     public CheckoutPage enterLastName(String lastName) {
         log.info("Entering last name: {}", lastName);
         WaitUtil.waitForElementVisible(driver, lastNameField);
-        lastNameField.click();
-        lastNameField.sendKeys(lastName);
+        new Actions(driver)
+            .click(lastNameField)
+            .keyDown(Keys.CONTROL).sendKeys("a").keyUp(Keys.CONTROL)
+            .sendKeys(Keys.DELETE)
+            .sendKeys(lastName)
+            .sendKeys(Keys.TAB)
+            .perform();
+        try { Thread.sleep(300); } catch (InterruptedException e) {
+            Thread.currentThread().interrupt();
+        }
         return this;
     }
 
     public CheckoutPage enterZipCode(String zipCode) {
         log.info("Entering zip code: {}", zipCode);
         WaitUtil.waitForElementVisible(driver, zipCodeField);
-        zipCodeField.click();
-        zipCodeField.sendKeys(zipCode);
+        new Actions(driver)
+            .click(zipCodeField)
+            .keyDown(Keys.CONTROL).sendKeys("a").keyUp(Keys.CONTROL)
+            .sendKeys(Keys.DELETE)
+            .sendKeys(zipCode)
+            .sendKeys(Keys.TAB)
+            .perform();
+        try { Thread.sleep(300); } catch (InterruptedException e) {
+            Thread.currentThread().interrupt();
+        }
         return this;
     }
 
@@ -85,17 +111,9 @@ public class CheckoutPage extends BasePage {
         try { Thread.sleep(1000); } catch (InterruptedException e) {
             Thread.currentThread().interrupt();
         }
-        // Use JavaScript to set values — reliable on headless CI
-        JavascriptExecutor js = (JavascriptExecutor) driver;
-        js.executeScript(
-            "document.getElementById('first-name').value = arguments[0];" +
-            "document.getElementById('last-name').value = arguments[1];" +
-            "document.getElementById('postal-code').value = arguments[2];",
-            firstName, lastName, zipCode
-        );
-        try { Thread.sleep(500); } catch (InterruptedException e) {
-            Thread.currentThread().interrupt();
-        }
+        enterFirstName(firstName);
+        enterLastName(lastName);
+        enterZipCode(zipCode);
         return this;
     }
 
