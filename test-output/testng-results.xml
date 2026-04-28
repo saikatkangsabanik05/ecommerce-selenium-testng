@@ -1,168 +1,81 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="9" passed="4" failed="5" skipped="0">
+<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-04-26T13:48:32 IST" name="Default suite" finished-at="2026-04-26T13:53:50 IST" duration-ms="318625">
+  <suite started-at="2026-04-28T10:20:16 IST" name="Default suite" finished-at="2026-04-28T10:20:25 IST" duration-ms="8413">
     <groups>
       <group name="regression">
-        <method signature="CheckoutTest.testCancelCheckoutReturnsToCart()[pri:0, instance:tests.CheckoutTest@4d18aa28]" name="testCancelCheckoutReturnsToCart" class="tests.CheckoutTest"/>
-        <method signature="CheckoutTest.testCheckoutStepOneTitle()[pri:0, instance:tests.CheckoutTest@4d18aa28]" name="testCheckoutStepOneTitle" class="tests.CheckoutTest"/>
-        <method signature="CheckoutTest.testCheckoutWithMultipleItems()[pri:0, instance:tests.CheckoutTest@4d18aa28]" name="testCheckoutWithMultipleItems" class="tests.CheckoutTest"/>
-        <method signature="CheckoutTest.testCompleteCheckoutEndToEnd()[pri:0, instance:tests.CheckoutTest@4d18aa28]" name="testCompleteCheckoutEndToEnd" class="tests.CheckoutTest"/>
-        <method signature="CheckoutTest.testErrorWhenFirstNameMissing()[pri:0, instance:tests.CheckoutTest@4d18aa28]" name="testErrorWhenFirstNameMissing" class="tests.CheckoutTest"/>
-        <method signature="CheckoutTest.testErrorWhenLastNameMissing()[pri:0, instance:tests.CheckoutTest@4d18aa28]" name="testErrorWhenLastNameMissing" class="tests.CheckoutTest"/>
-        <method signature="CheckoutTest.testErrorWhenZipCodeMissing()[pri:0, instance:tests.CheckoutTest@4d18aa28]" name="testErrorWhenZipCodeMissing" class="tests.CheckoutTest"/>
-        <method signature="CheckoutTest.testOrderConfirmationMessage()[pri:0, instance:tests.CheckoutTest@4d18aa28]" name="testOrderConfirmationMessage" class="tests.CheckoutTest"/>
-        <method signature="CheckoutTest.testOrderTotalEqualsSubtotalPlusTax()[pri:0, instance:tests.CheckoutTest@4d18aa28]" name="testOrderTotalEqualsSubtotalPlusTax" class="tests.CheckoutTest"/>
+        <method signature="CheckoutTest.testErrorWhenLastNameMissing()[pri:0, instance:tests.CheckoutTest@6cfcd46d]" name="testErrorWhenLastNameMissing" class="tests.CheckoutTest"/>
       </group> <!-- regression -->
-      <group name="smoke">
-        <method signature="CheckoutTest.testCompleteCheckoutEndToEnd()[pri:0, instance:tests.CheckoutTest@4d18aa28]" name="testCompleteCheckoutEndToEnd" class="tests.CheckoutTest"/>
-        <method signature="CheckoutTest.testOrderConfirmationMessage()[pri:0, instance:tests.CheckoutTest@4d18aa28]" name="testOrderConfirmationMessage" class="tests.CheckoutTest"/>
-      </group> <!-- smoke -->
     </groups>
-    <test started-at="2026-04-26T13:48:32 IST" name="Default test" finished-at="2026-04-26T13:53:50 IST" duration-ms="318625">
+    <test started-at="2026-04-28T10:20:16 IST" name="Default test" finished-at="2026-04-28T10:20:25 IST" duration-ms="8413">
       <class name="tests.CheckoutTest">
-        <test-method is-config="true" signature="beforeSuite()[pri:0, instance:tests.CheckoutTest@4d18aa28]" started-at="2026-04-26T13:48:32 IST" name="beforeSuite" finished-at="2026-04-26T13:48:32 IST" duration-ms="27" status="PASS">
+        <test-method is-config="true" signature="beforeSuite()[pri:0, instance:tests.CheckoutTest@6cfcd46d]" started-at="2026-04-28T10:20:16 IST" name="beforeSuite" finished-at="2026-04-28T10:20:16 IST" duration-ms="80" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeSuite -->
-        <test-method is-config="true" signature="setUp(org.testng.ITestResult)[pri:0, instance:tests.CheckoutTest@4d18aa28]" started-at="2026-04-26T13:48:32 IST" name="setUp" finished-at="2026-04-26T13:48:37 IST" duration-ms="5074" status="PASS">
+        <test-method is-config="true" signature="setUp(org.testng.ITestResult)[pri:0, instance:tests.CheckoutTest@6cfcd46d]" started-at="2026-04-28T10:20:16 IST" name="setUp" finished-at="2026-04-28T10:20:24 IST" duration-ms="7361" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name={null} status=CREATED method=CheckoutTest.testCancelCheckoutReturnsToCart()[pri:0, instance:tests.CheckoutTest@4d18aa28] output={null}]]]>
+                <![CDATA[[TestResult name={null} status=CREATED method=CheckoutTest.testErrorWhenLastNameMissing()[pri:0, instance:tests.CheckoutTest@6cfcd46d] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="testCancelCheckoutReturnsToCart()[pri:0, instance:tests.CheckoutTest@4d18aa28]" started-at="2026-04-26T13:48:37 IST" name="testCancelCheckoutReturnsToCart" description="TC_CHK_008 - Verify Cancel button returns user to cart" finished-at="2026-04-26T13:48:48 IST" duration-ms="11701" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testCancelCheckoutReturnsToCart -->
-        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.CheckoutTest@4d18aa28]" started-at="2026-04-26T13:48:48 IST" name="tearDown" finished-at="2026-04-26T13:48:49 IST" duration-ms="341" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=testCancelCheckoutReturnsToCart status=SUCCESS method=CheckoutTest.testCancelCheckoutReturnsToCart()[pri:0, instance:tests.CheckoutTest@4d18aa28] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp(org.testng.ITestResult)[pri:0, instance:tests.CheckoutTest@4d18aa28]" started-at="2026-04-26T13:48:49 IST" name="setUp" finished-at="2026-04-26T13:48:52 IST" duration-ms="3122" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name={null} status=CREATED method=CheckoutTest.testCheckoutStepOneTitle()[pri:0, instance:tests.CheckoutTest@4d18aa28] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="testCheckoutStepOneTitle()[pri:0, instance:tests.CheckoutTest@4d18aa28]" started-at="2026-04-26T13:48:52 IST" name="testCheckoutStepOneTitle" description="TC_CHK_002 - Verify checkout page title on Step One" finished-at="2026-04-26T13:49:01 IST" duration-ms="9080" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testCheckoutStepOneTitle -->
-        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.CheckoutTest@4d18aa28]" started-at="2026-04-26T13:49:01 IST" name="tearDown" finished-at="2026-04-26T13:49:01 IST" duration-ms="255" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=testCheckoutStepOneTitle status=SUCCESS method=CheckoutTest.testCheckoutStepOneTitle()[pri:0, instance:tests.CheckoutTest@4d18aa28] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp(org.testng.ITestResult)[pri:0, instance:tests.CheckoutTest@4d18aa28]" started-at="2026-04-26T13:49:01 IST" name="setUp" finished-at="2026-04-26T13:49:04 IST" duration-ms="3073" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name={null} status=CREATED method=CheckoutTest.testCheckoutWithMultipleItems()[pri:0, instance:tests.CheckoutTest@4d18aa28] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="testCheckoutWithMultipleItems()[pri:0, instance:tests.CheckoutTest@4d18aa28]" started-at="2026-04-26T13:49:04 IST" name="testCheckoutWithMultipleItems" description="TC_CHK_009 - Verify checkout works correctly with multiple items" finished-at="2026-04-26T13:49:12 IST" duration-ms="7439" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testCheckoutWithMultipleItems -->
-        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.CheckoutTest@4d18aa28]" started-at="2026-04-26T13:49:12 IST" name="tearDown" finished-at="2026-04-26T13:49:12 IST" duration-ms="279" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=testCheckoutWithMultipleItems status=SUCCESS method=CheckoutTest.testCheckoutWithMultipleItems()[pri:0, instance:tests.CheckoutTest@4d18aa28] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp(org.testng.ITestResult)[pri:0, instance:tests.CheckoutTest@4d18aa28]" started-at="2026-04-26T13:49:12 IST" name="setUp" finished-at="2026-04-26T13:49:15 IST" duration-ms="3134" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name={null} status=CREATED method=CheckoutTest.testCompleteCheckoutEndToEnd()[pri:0, instance:tests.CheckoutTest@4d18aa28] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="testCompleteCheckoutEndToEnd()[pri:0, instance:tests.CheckoutTest@4d18aa28]" started-at="2026-04-26T13:49:15 IST" name="testCompleteCheckoutEndToEnd" description="TC_CHK_001 - Complete end-to-end checkout flow" finished-at="2026-04-26T13:49:25 IST" duration-ms="9969" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testCompleteCheckoutEndToEnd -->
-        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.CheckoutTest@4d18aa28]" started-at="2026-04-26T13:49:25 IST" name="tearDown" finished-at="2026-04-26T13:49:25 IST" duration-ms="270" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=testCompleteCheckoutEndToEnd status=SUCCESS method=CheckoutTest.testCompleteCheckoutEndToEnd()[pri:0, instance:tests.CheckoutTest@4d18aa28] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp(org.testng.ITestResult)[pri:0, instance:tests.CheckoutTest@4d18aa28]" started-at="2026-04-26T13:49:25 IST" name="setUp" finished-at="2026-04-26T13:49:28 IST" duration-ms="2978" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name={null} status=CREATED method=CheckoutTest.testErrorWhenFirstNameMissing()[pri:0, instance:tests.CheckoutTest@4d18aa28] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="testErrorWhenFirstNameMissing()[pri:0, instance:tests.CheckoutTest@4d18aa28]" started-at="2026-04-26T13:49:28 IST" name="testErrorWhenFirstNameMissing" description="TC_CHK_003 - Verify error when first name is missing" finished-at="2026-04-26T13:50:18 IST" duration-ms="49599" status="FAIL">
-          <exception class="org.openqa.selenium.TimeoutException">
+        <test-method signature="testErrorWhenLastNameMissing()[pri:0, instance:tests.CheckoutTest@6cfcd46d]" started-at="2026-04-28T10:20:24 IST" name="testErrorWhenLastNameMissing" description="TC_CHK_004 - Verify error when last name is missing" finished-at="2026-04-28T10:20:25 IST" duration-ms="783" status="FAIL">
+          <exception class="org.openqa.selenium.NoSuchSessionException">
             <message>
-              <![CDATA[Expected condition failed: waiting for url to contain "checkout-step-two". Current url: "https://www.saucedemo.com/checkout-step-one.html" (tried for 40 second(s) with 500 milliseconds interval)
+              <![CDATA[invalid session id: session deleted as the browser has closed the connection
+from disconnected: not connected to DevTools
+  (Session info: chrome=147.0.7727.116)
 Build info: version: '4.18.1', revision: 'b1d3319b48'
 System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '23.0.1'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 147.0.7727.116, chrome: {chromedriverVersion: 147.0.7727.117 (474cc805edd..., userDataDir: C:\Users\Saika\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:64431}, goog:processID: 26276, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:64431/devtoo..., se:cdpVersion: 147.0.7727.116, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 275c22310a03813cb14e58b62c2aadb5]]>
+Command: [578ff80b3e439878d4228b07660fe2b8, findElement {value=user-name, using=id}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 147.0.7727.116, chrome: {chromedriverVersion: 147.0.7727.117 (474cc805edd..., userDataDir: C:\Users\Saika\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50234}, goog:processID: 22852, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:50234/devtoo..., se:cdpVersion: 147.0.7727.116, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 578ff80b3e439878d4228b07660fe2b8]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for url to contain "checkout-step-two". Current url: "https://www.saucedemo.com/checkout-step-one.html" (tried for 40 second(s) with 500 milliseconds interval)
+              <![CDATA[org.openqa.selenium.NoSuchSessionException: invalid session id: session deleted as the browser has closed the connection
+from disconnected: not connected to DevTools
+  (Session info: chrome=147.0.7727.116)
 Build info: version: '4.18.1', revision: 'b1d3319b48'
 System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '23.0.1'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 147.0.7727.116, chrome: {chromedriverVersion: 147.0.7727.117 (474cc805edd..., userDataDir: C:\Users\Saika\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:64431}, goog:processID: 26276, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:64431/devtoo..., se:cdpVersion: 147.0.7727.116, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 275c22310a03813cb14e58b62c2aadb5
-at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
-at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
-at utils.WaitUtil.waitForUrlContains(WaitUtil.java:49)
-at pages.CheckoutPage.clickContinue(CheckoutPage.java:88)
-at tests.CheckoutTest.testErrorWhenFirstNameMissing(CheckoutTest.java:110)
+Command: [578ff80b3e439878d4228b07660fe2b8, findElement {value=user-name, using=id}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 147.0.7727.116, chrome: {chromedriverVersion: 147.0.7727.117 (474cc805edd..., userDataDir: C:\Users\Saika\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50234}, goog:processID: 22852, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:50234/devtoo..., se:cdpVersion: 147.0.7727.116, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 578ff80b3e439878d4228b07660fe2b8
+at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:501)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:485)
+at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:519)
+at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:66)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:356)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:350)
+at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+at jdk.proxy2/jdk.proxy2.$Proxy30.isDisplayed(Unknown Source)
+at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:304)
+at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:290)
+at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:287)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
+at utils.WaitUtil.waitForElementVisible(WaitUtil.java:27)
+at base.BasePage.type(BasePage.java:32)
+at pages.LoginPage.enterUsername(LoginPage.java:37)
+at pages.LoginPage.login(LoginPage.java:63)
+at tests.CheckoutTest.loginAndGetHomePage(CheckoutTest.java:29)
+at tests.CheckoutTest.addItemAndGoToCart(CheckoutTest.java:36)
+at tests.CheckoutTest.testErrorWhenLastNameMissing(CheckoutTest.java:129)
 at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
@@ -191,326 +104,22 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.TimeoutException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testErrorWhenFirstNameMissing -->
-        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.CheckoutTest@4d18aa28]" started-at="2026-04-26T13:50:18 IST" name="tearDown" finished-at="2026-04-26T13:50:18 IST" duration-ms="359" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=testErrorWhenFirstNameMissing status=FAILURE method=CheckoutTest.testErrorWhenFirstNameMissing()[pri:0, instance:tests.CheckoutTest@4d18aa28] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp(org.testng.ITestResult)[pri:0, instance:tests.CheckoutTest@4d18aa28]" started-at="2026-04-26T13:50:18 IST" name="setUp" finished-at="2026-04-26T13:50:22 IST" duration-ms="3192" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name={null} status=CREATED method=CheckoutTest.testErrorWhenLastNameMissing()[pri:0, instance:tests.CheckoutTest@4d18aa28] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="testErrorWhenLastNameMissing()[pri:0, instance:tests.CheckoutTest@4d18aa28]" started-at="2026-04-26T13:50:22 IST" name="testErrorWhenLastNameMissing" description="TC_CHK_004 - Verify error when last name is missing" finished-at="2026-04-26T13:51:11 IST" duration-ms="49505" status="FAIL">
-          <exception class="org.openqa.selenium.TimeoutException">
-            <message>
-              <![CDATA[Expected condition failed: waiting for url to contain "checkout-step-two". Current url: "https://www.saucedemo.com/checkout-step-one.html" (tried for 40 second(s) with 500 milliseconds interval)
-Build info: version: '4.18.1', revision: 'b1d3319b48'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '23.0.1'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 147.0.7727.116, chrome: {chromedriverVersion: 147.0.7727.117 (474cc805edd..., userDataDir: C:\Users\Saika\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50898}, goog:processID: 26368, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:50898/devtoo..., se:cdpVersion: 147.0.7727.116, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: d9ca2d9fadc1549e7093c7eab8ff45c8]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for url to contain "checkout-step-two". Current url: "https://www.saucedemo.com/checkout-step-one.html" (tried for 40 second(s) with 500 milliseconds interval)
-Build info: version: '4.18.1', revision: 'b1d3319b48'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '23.0.1'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 147.0.7727.116, chrome: {chromedriverVersion: 147.0.7727.117 (474cc805edd..., userDataDir: C:\Users\Saika\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50898}, goog:processID: 26368, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:50898/devtoo..., se:cdpVersion: 147.0.7727.116, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: d9ca2d9fadc1549e7093c7eab8ff45c8
-at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
-at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
-at utils.WaitUtil.waitForUrlContains(WaitUtil.java:49)
-at pages.CheckoutPage.clickContinue(CheckoutPage.java:88)
-at tests.CheckoutTest.testErrorWhenLastNameMissing(CheckoutTest.java:133)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
-at org.testng.TestRunner.privateRun(TestRunner.java:819)
-at org.testng.TestRunner.run(TestRunner.java:619)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
-at org.testng.SuiteRunner.run(SuiteRunner.java:336)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
-at org.testng.TestNG.runSuites(TestNG.java:1134)
-at org.testng.TestNG.run(TestNG.java:1101)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.TimeoutException -->
+          </exception> <!-- org.openqa.selenium.NoSuchSessionException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testErrorWhenLastNameMissing -->
-        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.CheckoutTest@4d18aa28]" started-at="2026-04-26T13:51:11 IST" name="tearDown" finished-at="2026-04-26T13:51:11 IST" duration-ms="278" status="PASS">
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.CheckoutTest@6cfcd46d]" started-at="2026-04-28T10:20:25 IST" name="tearDown" finished-at="2026-04-28T10:20:25 IST" duration-ms="199" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=testErrorWhenLastNameMissing status=FAILURE method=CheckoutTest.testErrorWhenLastNameMissing()[pri:0, instance:tests.CheckoutTest@4d18aa28] output={null}]]]>
+                <![CDATA[[TestResult name=testErrorWhenLastNameMissing status=FAILURE method=CheckoutTest.testErrorWhenLastNameMissing()[pri:0, instance:tests.CheckoutTest@6cfcd46d] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp(org.testng.ITestResult)[pri:0, instance:tests.CheckoutTest@4d18aa28]" started-at="2026-04-26T13:51:11 IST" name="setUp" finished-at="2026-04-26T13:51:14 IST" duration-ms="2905" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name={null} status=CREATED method=CheckoutTest.testErrorWhenZipCodeMissing()[pri:0, instance:tests.CheckoutTest@4d18aa28] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="testErrorWhenZipCodeMissing()[pri:0, instance:tests.CheckoutTest@4d18aa28]" started-at="2026-04-26T13:51:14 IST" name="testErrorWhenZipCodeMissing" description="TC_CHK_005 - Verify error when zip/postal code is missing" finished-at="2026-04-26T13:52:04 IST" duration-ms="49512" status="FAIL">
-          <exception class="org.openqa.selenium.TimeoutException">
-            <message>
-              <![CDATA[Expected condition failed: waiting for url to contain "checkout-step-two". Current url: "https://www.saucedemo.com/checkout-step-one.html" (tried for 40 second(s) with 500 milliseconds interval)
-Build info: version: '4.18.1', revision: 'b1d3319b48'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '23.0.1'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 147.0.7727.116, chrome: {chromedriverVersion: 147.0.7727.117 (474cc805edd..., userDataDir: C:\Users\Saika\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:60447}, goog:processID: 16792, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:60447/devtoo..., se:cdpVersion: 147.0.7727.116, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 69a8bc9c81191e4dfaae40d968052b22]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for url to contain "checkout-step-two". Current url: "https://www.saucedemo.com/checkout-step-one.html" (tried for 40 second(s) with 500 milliseconds interval)
-Build info: version: '4.18.1', revision: 'b1d3319b48'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '23.0.1'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 147.0.7727.116, chrome: {chromedriverVersion: 147.0.7727.117 (474cc805edd..., userDataDir: C:\Users\Saika\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:60447}, goog:processID: 16792, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:60447/devtoo..., se:cdpVersion: 147.0.7727.116, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 69a8bc9c81191e4dfaae40d968052b22
-at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
-at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
-at utils.WaitUtil.waitForUrlContains(WaitUtil.java:49)
-at pages.CheckoutPage.clickContinue(CheckoutPage.java:88)
-at tests.CheckoutTest.testErrorWhenZipCodeMissing(CheckoutTest.java:156)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
-at org.testng.TestRunner.privateRun(TestRunner.java:819)
-at org.testng.TestRunner.run(TestRunner.java:619)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
-at org.testng.SuiteRunner.run(SuiteRunner.java:336)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
-at org.testng.TestNG.runSuites(TestNG.java:1134)
-at org.testng.TestNG.run(TestNG.java:1101)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.TimeoutException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testErrorWhenZipCodeMissing -->
-        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.CheckoutTest@4d18aa28]" started-at="2026-04-26T13:52:04 IST" name="tearDown" finished-at="2026-04-26T13:52:04 IST" duration-ms="295" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=testErrorWhenZipCodeMissing status=FAILURE method=CheckoutTest.testErrorWhenZipCodeMissing()[pri:0, instance:tests.CheckoutTest@4d18aa28] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp(org.testng.ITestResult)[pri:0, instance:tests.CheckoutTest@4d18aa28]" started-at="2026-04-26T13:52:04 IST" name="setUp" finished-at="2026-04-26T13:52:07 IST" duration-ms="3021" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name={null} status=CREATED method=CheckoutTest.testOrderConfirmationMessage()[pri:0, instance:tests.CheckoutTest@4d18aa28] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="testOrderConfirmationMessage()[pri:0, instance:tests.CheckoutTest@4d18aa28]" started-at="2026-04-26T13:52:07 IST" name="testOrderConfirmationMessage" description="TC_CHK_007 - Verify order confirmation message after placing order" finished-at="2026-04-26T13:52:57 IST" duration-ms="49589" status="FAIL">
-          <exception class="org.openqa.selenium.TimeoutException">
-            <message>
-              <![CDATA[Expected condition failed: waiting for url to contain "checkout-step-two". Current url: "https://www.saucedemo.com/checkout-step-one.html" (tried for 40 second(s) with 500 milliseconds interval)
-Build info: version: '4.18.1', revision: 'b1d3319b48'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '23.0.1'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 147.0.7727.116, chrome: {chromedriverVersion: 147.0.7727.117 (474cc805edd..., userDataDir: C:\Users\Saika\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56168}, goog:processID: 23228, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56168/devtoo..., se:cdpVersion: 147.0.7727.116, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 3262bdf0f24d0b26f8d7f637a3b74c77]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for url to contain "checkout-step-two". Current url: "https://www.saucedemo.com/checkout-step-one.html" (tried for 40 second(s) with 500 milliseconds interval)
-Build info: version: '4.18.1', revision: 'b1d3319b48'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '23.0.1'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 147.0.7727.116, chrome: {chromedriverVersion: 147.0.7727.117 (474cc805edd..., userDataDir: C:\Users\Saika\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56168}, goog:processID: 23228, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56168/devtoo..., se:cdpVersion: 147.0.7727.116, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 3262bdf0f24d0b26f8d7f637a3b74c77
-at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
-at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
-at utils.WaitUtil.waitForUrlContains(WaitUtil.java:49)
-at pages.CheckoutPage.clickContinue(CheckoutPage.java:88)
-at tests.CheckoutTest.testOrderConfirmationMessage(CheckoutTest.java:213)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
-at org.testng.TestRunner.privateRun(TestRunner.java:819)
-at org.testng.TestRunner.run(TestRunner.java:619)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
-at org.testng.SuiteRunner.run(SuiteRunner.java:336)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
-at org.testng.TestNG.runSuites(TestNG.java:1134)
-at org.testng.TestNG.run(TestNG.java:1101)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.TimeoutException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testOrderConfirmationMessage -->
-        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.CheckoutTest@4d18aa28]" started-at="2026-04-26T13:52:57 IST" name="tearDown" finished-at="2026-04-26T13:52:57 IST" duration-ms="309" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=testOrderConfirmationMessage status=FAILURE method=CheckoutTest.testOrderConfirmationMessage()[pri:0, instance:tests.CheckoutTest@4d18aa28] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp(org.testng.ITestResult)[pri:0, instance:tests.CheckoutTest@4d18aa28]" started-at="2026-04-26T13:52:57 IST" name="setUp" finished-at="2026-04-26T13:53:00 IST" duration-ms="3297" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name={null} status=CREATED method=CheckoutTest.testOrderTotalEqualsSubtotalPlusTax()[pri:0, instance:tests.CheckoutTest@4d18aa28] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="testOrderTotalEqualsSubtotalPlusTax()[pri:0, instance:tests.CheckoutTest@4d18aa28]" started-at="2026-04-26T13:53:00 IST" name="testOrderTotalEqualsSubtotalPlusTax" description="TC_CHK_006 - Verify order total = subtotal + tax" finished-at="2026-04-26T13:53:50 IST" duration-ms="49641" status="FAIL">
-          <exception class="org.openqa.selenium.TimeoutException">
-            <message>
-              <![CDATA[Expected condition failed: waiting for url to contain "checkout-step-two". Current url: "https://www.saucedemo.com/checkout-step-one.html" (tried for 40 second(s) with 500 milliseconds interval)
-Build info: version: '4.18.1', revision: 'b1d3319b48'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '23.0.1'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 147.0.7727.116, chrome: {chromedriverVersion: 147.0.7727.117 (474cc805edd..., userDataDir: C:\Users\Saika\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:62572}, goog:processID: 18796, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:62572/devtoo..., se:cdpVersion: 147.0.7727.116, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 4cceed1ffecd20706a58cf4cd38cc2af]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for url to contain "checkout-step-two". Current url: "https://www.saucedemo.com/checkout-step-one.html" (tried for 40 second(s) with 500 milliseconds interval)
-Build info: version: '4.18.1', revision: 'b1d3319b48'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '23.0.1'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 147.0.7727.116, chrome: {chromedriverVersion: 147.0.7727.117 (474cc805edd..., userDataDir: C:\Users\Saika\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:62572}, goog:processID: 18796, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:62572/devtoo..., se:cdpVersion: 147.0.7727.116, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 4cceed1ffecd20706a58cf4cd38cc2af
-at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
-at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
-at utils.WaitUtil.waitForUrlContains(WaitUtil.java:49)
-at pages.CheckoutPage.clickContinue(CheckoutPage.java:88)
-at tests.CheckoutTest.testOrderTotalEqualsSubtotalPlusTax(CheckoutTest.java:181)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
-at org.testng.TestRunner.privateRun(TestRunner.java:819)
-at org.testng.TestRunner.run(TestRunner.java:619)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
-at org.testng.SuiteRunner.run(SuiteRunner.java:336)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
-at org.testng.TestNG.runSuites(TestNG.java:1134)
-at org.testng.TestNG.run(TestNG.java:1101)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.TimeoutException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testOrderTotalEqualsSubtotalPlusTax -->
-        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.CheckoutTest@4d18aa28]" started-at="2026-04-26T13:53:50 IST" name="tearDown" finished-at="2026-04-26T13:53:50 IST" duration-ms="328" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=testOrderTotalEqualsSubtotalPlusTax status=FAILURE method=CheckoutTest.testOrderTotalEqualsSubtotalPlusTax()[pri:0, instance:tests.CheckoutTest@4d18aa28] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="afterSuite()[pri:0, instance:tests.CheckoutTest@4d18aa28]" started-at="2026-04-26T13:53:50 IST" name="afterSuite" finished-at="2026-04-26T13:53:50 IST" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="afterSuite()[pri:0, instance:tests.CheckoutTest@6cfcd46d]" started-at="2026-04-28T10:20:25 IST" name="afterSuite" finished-at="2026-04-28T10:20:25 IST" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterSuite -->

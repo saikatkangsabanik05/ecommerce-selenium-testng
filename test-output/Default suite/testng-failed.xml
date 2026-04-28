@@ -6,14 +6,10 @@
       <class name="tests.CheckoutTest">
         <methods>
           <include name="setUp"/>
-          <include name="testOrderTotalEqualsSubtotalPlusTax"/>
           <include name="tearDown"/>
           <include name="beforeSuite"/>
           <include name="afterSuite"/>
           <include name="testErrorWhenLastNameMissing"/>
-          <include name="testOrderConfirmationMessage"/>
-          <include name="testErrorWhenZipCodeMissing"/>
-          <include name="testErrorWhenFirstNameMissing"/>
         </methods>
       </class> <!-- tests.CheckoutTest -->
     </classes>

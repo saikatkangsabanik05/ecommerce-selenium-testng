@@ -99,76 +99,60 @@ public class CheckoutTest extends BaseTest {
     // -------------------------------------------------------
     @Test(groups = {"regression"},
     	      description = "TC_CHK_003 - Verify error when first name is missing")
-    public void testErrorWhenFirstNameMissing() {
-	    log.info("TC_CHK_003: Error for missing first name");
-	    CartPage cartPage = addItemAndGoToCart();
-	    CheckoutPage checkoutPage = cartPage.proceedToCheckout();
+    	public void testErrorWhenFirstNameMissing() {
+    	    log.info("TC_CHK_003: Error for missing first name");
+    	    CartPage cartPage = addItemAndGoToCart();
+    	    CheckoutPage checkoutPage = cartPage.proceedToCheckout();
 
-	    // Clear all fields via JS, then only fill last name and zip
-	    ((org.openqa.selenium.JavascriptExecutor) getDriver()).executeScript(
-	        "document.getElementById('first-name').value = '';" +
-	        "document.getElementById('last-name').value = 'Doe';" +
-	        "document.getElementById('postal-code').value = '10001';"
-	    );
-	    checkoutPage.clickContinueForValidation();
+    	    // Only fill last name and zip — skip first name
+    	    checkoutPage.enterLastName("Doe")
+    	                .enterZipCode("10001")
+    	                .clickContinueForValidation();
 
-	    Assert.assertTrue(checkoutPage.isErrorDisplayed(),
-	        "Error should be shown when first name is missing");
-	    Assert.assertTrue(checkoutPage.getErrorMessage().contains("First Name is required"),
-	        "Error should mention First Name, got: " + checkoutPage.getErrorMessage());
-	    log.info("TC_CHK_003 PASSED");
-	}
+    	    Assert.assertTrue(checkoutPage.isErrorDisplayed(),
+    	        "Error should be shown when first name is missing");
+    	    Assert.assertTrue(checkoutPage.getErrorMessage().contains("First Name is required"),
+    	        "Error should mention First Name, got: " + checkoutPage.getErrorMessage());
+    	    log.info("TC_CHK_003 PASSED");
+    	}
 
-    // -------------------------------------------------------
-    // TC_CHK_004
-    // -------------------------------------------------------
-    @Test(groups = {"regression"},
+    	@Test(groups = {"regression"},
     	      description = "TC_CHK_004 - Verify error when last name is missing")
-    public void testErrorWhenLastNameMissing() {
-	    log.info("TC_CHK_004: Error for missing last name");
-	    CartPage cartPage = addItemAndGoToCart();
-	    CheckoutPage checkoutPage = cartPage.proceedToCheckout();
+    	public void testErrorWhenLastNameMissing() {
+    	    log.info("TC_CHK_004: Error for missing last name");
+    	    CartPage cartPage = addItemAndGoToCart();
+    	    CheckoutPage checkoutPage = cartPage.proceedToCheckout();
 
-	    // Fill first name only — leave last name and zip empty
-	    ((org.openqa.selenium.JavascriptExecutor) getDriver()).executeScript(
-	        "document.getElementById('first-name').value = 'John';" +
-	        "document.getElementById('last-name').value = '';" +
-	        "document.getElementById('postal-code').value = '10001';"
-	    );
-	    checkoutPage.clickContinueForValidation();
+    	    // Fill first name and zip — skip last name
+    	    checkoutPage.enterFirstName("John")
+    	                .enterZipCode("10001")
+    	                .clickContinueForValidation();
 
-	    Assert.assertTrue(checkoutPage.isErrorDisplayed(),
-	        "Error should be shown when last name is missing");
-	    Assert.assertTrue(checkoutPage.getErrorMessage().contains("Last Name is required"),
-	        "Error should mention Last Name, got: " + checkoutPage.getErrorMessage());
-	    log.info("TC_CHK_004 PASSED");
-	}
+    	    Assert.assertTrue(checkoutPage.isErrorDisplayed(),
+    	        "Error should be shown when last name is missing");
+    	    Assert.assertTrue(checkoutPage.getErrorMessage().contains("Last Name is required"),
+    	        "Error should mention Last Name, got: " + checkoutPage.getErrorMessage());
+    	    log.info("TC_CHK_004 PASSED");
+    	}
 
-
-    // -------------------------------------------------------
-    // TC_CHK_005
-    // -------------------------------------------------------
-    @Test(groups = {"regression"},
+    	@Test(groups = {"regression"},
     	      description = "TC_CHK_005 - Verify error when zip code is missing")
-    public void testErrorWhenZipCodeMissing() {
-	    log.info("TC_CHK_005: Error for missing zip code");
-	    CartPage cartPage = addItemAndGoToCart();
-	    CheckoutPage checkoutPage = cartPage.proceedToCheckout();
+    	public void testErrorWhenZipCodeMissing() {
+    	    log.info("TC_CHK_005: Error for missing zip code");
+    	    CartPage cartPage = addItemAndGoToCart();
+    	    CheckoutPage checkoutPage = cartPage.proceedToCheckout();
 
-	    // Fill first name and last name — leave zip empty
-	    ((org.openqa.selenium.JavascriptExecutor) getDriver()).executeScript(
-	        "document.getElementById('first-name').value = 'John';" +
-	        "document.getElementById('last-name').value = 'Doe';" +
-	        "document.getElementById('postal-code').value = '';"
-	    );
-	    checkoutPage.clickContinueForValidation();
+    	    // Fill first name and last name — skip zip
+    	    checkoutPage.enterFirstName("John")
+    	                .enterLastName("Doe")
+    	                .clickContinueForValidation();
 
-	    Assert.assertTrue(checkoutPage.isErrorDisplayed(),
-	        "Error should be shown when zip code is missing");
-	    Assert.assertTrue(checkoutPage.getErrorMessage().contains("Postal Code is required"),
-	        "Error should mention Postal Code, got: " + checkoutPage.getErrorMessage());
-	    log.info("TC_CHK_005 PASSED");
-	}
+    	    Assert.assertTrue(checkoutPage.isErrorDisplayed(),
+    	        "Error should be shown when zip code is missing");
+    	    Assert.assertTrue(checkoutPage.getErrorMessage().contains("Postal Code is required"),
+    	        "Error should mention Postal Code, got: " + checkoutPage.getErrorMessage());
+    	    log.info("TC_CHK_005 PASSED");
+    	}
 
     // -------------------------------------------------------
     // TC_CHK_006

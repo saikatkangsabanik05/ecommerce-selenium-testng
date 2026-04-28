@@ -411,3 +411,23 @@
 2026-04-26 13:53:50 [main] INFO  base.BaseTest - Screenshot: C:\SeleniumProject\ecommerce-selenium-testng\screenshots\testOrderTotalEqualsSubtotalPlusTax_20260426_135350.png
 2026-04-26 13:53:50 [main] INFO  utils.DriverManager - Browser closed and driver removed from ThreadLocal
 2026-04-26 13:53:50 [main] INFO  base.BaseTest - ========== TEST SUITE COMPLETED ==========
+2026-04-28 10:20:16 [main] INFO  base.BaseTest - ========== TEST SUITE STARTED ==========
+2026-04-28 10:20:16 [main] INFO  utils.ConfigReader - Configuration loaded successfully from: C:\SeleniumProject\ecommerce-selenium-testng/src/test/resources/config.properties
+2026-04-28 10:20:16 [main] INFO  base.BaseTest - Base URL : https://www.saucedemo.com
+2026-04-28 10:20:16 [main] INFO  base.BaseTest - Browser  : chrome
+2026-04-28 10:20:16 [main] INFO  base.BaseTest - ------ Starting: testErrorWhenLastNameMissing ------
+2026-04-28 10:20:17 [main] INFO  utils.DriverManager - Initializing chrome browser (headless=false)
+2026-04-28 10:20:22 [main] INFO  utils.DriverManager - Browser initialized successfully: chrome
+2026-04-28 10:20:24 [main] INFO  base.BaseTest - Navigated to: https://www.saucedemo.com
+2026-04-28 10:20:24 [main] INFO  base.BaseTest - TC_CHK_004: Error for missing last name
+2026-04-28 10:20:24 [main] INFO  base.BasePage - Entering username: standard_user
+2026-04-28 10:20:25 [main] ERROR base.BaseTest - FAILED: testErrorWhenLastNameMissing
+2026-04-28 10:20:25 [main] WARN  base.BaseTest - Could not capture screenshot: invalid session id
+Build info: version: '4.18.1', revision: 'b1d3319b48'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '23.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [578ff80b3e439878d4228b07660fe2b8, screenshot {}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 147.0.7727.116, chrome: {chromedriverVersion: 147.0.7727.117 (474cc805edd..., userDataDir: C:\Users\Saika\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50234}, goog:processID: 22852, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:50234/devtoo..., se:cdpVersion: 147.0.7727.116, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 578ff80b3e439878d4228b07660fe2b8
+2026-04-28 10:20:25 [main] INFO  utils.DriverManager - Browser closed and driver removed from ThreadLocal
+2026-04-28 10:20:25 [main] INFO  base.BaseTest - ========== TEST SUITE COMPLETED ==========

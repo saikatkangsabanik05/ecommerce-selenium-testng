@@ -57,22 +57,25 @@ public class CheckoutPage extends BasePage {
     }
 
     public CheckoutPage enterFirstName(String firstName) {
+        log.info("Entering first name: {}", firstName);
         WaitUtil.waitForElementVisible(driver, firstNameField);
-        firstNameField.clear();
+        firstNameField.click();
         firstNameField.sendKeys(firstName);
         return this;
     }
 
     public CheckoutPage enterLastName(String lastName) {
+        log.info("Entering last name: {}", lastName);
         WaitUtil.waitForElementVisible(driver, lastNameField);
-        lastNameField.clear();
+        lastNameField.click();
         lastNameField.sendKeys(lastName);
         return this;
     }
 
     public CheckoutPage enterZipCode(String zipCode) {
+        log.info("Entering zip code: {}", zipCode);
         WaitUtil.waitForElementVisible(driver, zipCodeField);
-        zipCodeField.clear();
+        zipCodeField.click();
         zipCodeField.sendKeys(zipCode);
         return this;
     }
