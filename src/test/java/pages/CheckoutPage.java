@@ -60,6 +60,10 @@ public class CheckoutPage extends BasePage {
 
     public CheckoutPage enterFirstName(String firstName) {
         log.info("Entering first name: {}", firstName);
+        // Wait for page to be fully interactive
+        try { Thread.sleep(1500); } catch (InterruptedException e) {
+            Thread.currentThread().interrupt();
+        }
         WaitUtil.waitForElementVisible(driver, firstNameField);
         new Actions(driver)
             .click(firstNameField)
@@ -68,7 +72,7 @@ public class CheckoutPage extends BasePage {
             .sendKeys(firstName)
             .sendKeys(Keys.TAB)
             .perform();
-        try { Thread.sleep(300); } catch (InterruptedException e) {
+        try { Thread.sleep(500); } catch (InterruptedException e) {
             Thread.currentThread().interrupt();
         }
         return this;

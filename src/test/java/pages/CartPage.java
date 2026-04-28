@@ -113,6 +113,10 @@ public class CartPage extends BasePage {
         WaitUtil.waitForElementClickable(driver, checkoutButton);
         jsClick(checkoutButton);
         WaitUtil.waitForUrlContains(driver, "checkout-step-one");
+        // Extra wait for React form to fully initialize
+        try { Thread.sleep(3000); } catch (InterruptedException e) {
+            Thread.currentThread().interrupt();
+        }
         return new CheckoutPage(driver);
     }
 }
