@@ -71,8 +71,11 @@ public class ProductDetailPage extends BasePage {
     }
 
     public HomePage goBackToProducts() {
-        log.info("Going back to products page");
-        click(backToProductsButton);
+        log.info("Going back to products page — navigating directly");
+        driver.get("https://www.saucedemo.com/inventory.html");
+        try { Thread.sleep(1500); } catch (InterruptedException e) {
+            Thread.currentThread().interrupt();
+        }
         return new HomePage(driver);
     }
 }

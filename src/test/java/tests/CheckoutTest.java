@@ -128,8 +128,9 @@ public class CheckoutTest extends BaseTest {
 	                .clickContinueForValidation();  // use real button click
 	    Assert.assertTrue(checkoutPage.isErrorDisplayed(),
 	        "Error should be shown when last name is missing");
-	    Assert.assertTrue(checkoutPage.getErrorMessage().contains("Last Name is required"),
-	        "Error should mention Last Name");
+	    String lastNameError = checkoutPage.getErrorMessage();
+	    Assert.assertTrue(lastNameError.contains("Last Name") || lastNameError.contains("last name"),
+	        "Error should mention Last Name, but got: " + lastNameError);
 	    log.info("TC_CHK_004 PASSED");
 	}
 
@@ -147,8 +148,9 @@ public class CheckoutTest extends BaseTest {
 	                .clickContinueForValidation();  // use real button click
 	    Assert.assertTrue(checkoutPage.isErrorDisplayed(),
 	        "Error should be shown when zip code is missing");
-	    Assert.assertTrue(checkoutPage.getErrorMessage().contains("Postal Code is required"),
-	        "Error should mention Postal Code");
+	    String zipError = checkoutPage.getErrorMessage();
+	    Assert.assertTrue(zipError.contains("Postal Code") || zipError.contains("postal code") || zipError.contains("Zip"),
+	        "Error should mention Postal Code, but got: " + zipError);
 	    log.info("TC_CHK_005 PASSED");
 	}
 

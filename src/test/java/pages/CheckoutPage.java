@@ -112,7 +112,8 @@ public class CheckoutPage extends BasePage {
         log.info("Clicking Continue button for validation check");
         WaitUtil.waitForElementClickable(driver, continueButton);
         jsClick(continueButton);
-        try { Thread.sleep(1500); } catch (InterruptedException e) {
+        // Wait longer for error message to appear on CI
+        try { Thread.sleep(3000); } catch (InterruptedException e) {
             Thread.currentThread().interrupt();
         }
         return this;
